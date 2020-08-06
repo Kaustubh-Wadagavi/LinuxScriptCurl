@@ -32,7 +32,7 @@ do
 	    echo -e "\nPlease enter Address:"
 	    read Address
 	    
-	    curl --user $UserName:$Password --header "Content-Type: application/json" --request POST --data '{"institureName": '$instituteName',"name":'$Name',"code":'$code',"coordinators":'$Cordinators',"type":'$Type',"address":'$Address'}' https://test.openspecimen.org/os-mysql/rest/ng/institutes/
+	    curl --user $UserName:$Password --header "Content-Type: application/json" --request POST --data '{"institureName": "'"$instituteName"'","name":"'"$Name"'","code":"'"$code"'","coordinators":"'"$Cordinators"'","type":"'"$Type"'","address":"'"$Address"'"}' https://test.openspecimen.org/os-mysql/rest/ng/institutes/
 
     
 	elif [ $Input == $userCreation ]
@@ -59,7 +59,7 @@ do
 	    echo -e "\nPlease enter Address:"
 	    read Address
 
-	    curl --user $UserName:$Password --header "Content-Type: application/json" --request POST --data '{"type": $userType,"firstName":$firstName,"lastName":$lastName,"emailAddress":$emailAddress,"phoneNumber":$phoneNumber,"loginName":$loginName,"instituteName":$instituteName,"primarySite":$primarySite,"timeZone":$timeZone,"address":$Address}' https://test.openspecimen.org/os-mysql/rest/ng/institutes/curl --user 
+	    curl --user $UserName:$Password --header "Content-Type: application/json" --request POST --data '{"type":"'"$userType"'","firstName":"'"$firstName"'","lastName":"'"$lastName"'","emailAddress":"'"$emailAddress"'","phoneNumber":"'"$phoneNumber"'","loginName":"'"$loginName"'","instituteName":"'"$instituteName"'","primarySite":"'"$primarySite"'","timeZone":"'"$timeZone"'","address":"'"$Address"'"}' https://test.openspecimen.org/os-mysql/rest/ng/users
 	    
 	else 
 	    echo "Your Input is Wrong!!"
